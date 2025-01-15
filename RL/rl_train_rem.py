@@ -4,6 +4,7 @@ from stable_baselines3 import PPO
 from ot2_gym_wrapper import OT2Env  
 from clearml import Task
 import wandb
+import gymnasium as gym
 from wandb.integration.sb3 import WandbCallback
 
 
