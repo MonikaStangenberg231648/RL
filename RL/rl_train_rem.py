@@ -27,7 +27,7 @@ args = parser.parse_args()
 
 env = OT2Env(render=False, num_agents=1)
 
-model = PPO('MlpPolicy', env, verbose=1, device='gpu',
+model = PPO('MlpPolicy', env, verbose=1, device='cpu',
             learning_rate=args.learning_rate, 
             batch_size=args.batch_size, 
             n_steps=args.n_steps, 
