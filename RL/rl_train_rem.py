@@ -5,9 +5,9 @@ from ot2_gym_wrapper import OT2Env
 from clearml import Task
 import wandb
 from wandb.integration.sb3 import WandbCallback
-import os
-os.system("pip install typing_extensions>=4.7.0")
-os.system("pip install 'shimmy>=2.0'")
+os.system("pip install --upgrade typing_extensions>=4.7.0")
+os.system("pip install --upgrade pydantic")
+
 
 os.environ['WANDB_API_KEY'] = '81e90cda052e4ff4b2e6d490e7c614a9b48a3307' 
 
