@@ -1,0 +1,17 @@
+Requirement already satisfied: gymnasium in c:\users\mstan\anaconda3\envs\myenv\lib\site-packages (0.29.1)
+Requirement already satisfied: shimmy in c:\users\mstan\anaconda3\envs\myenv\lib\site-packages (2.0.0)
+Requirement already satisfied: numpy>=1.21.0 in c:\users\mstan\anaconda3\envs\myenv\lib\site-packages (from gymnasium) (1.24.3)
+Requirement already satisfied: cloudpickle>=1.2.0 in c:\users\mstan\anaconda3\envs\myenv\lib\site-packages (from gymnasium) (3.1.0)
+Requirement already satisfied: typing-extensions>=4.3.0 in c:\users\mstan\anaconda3\envs\myenv\lib\site-packages (from gymnasium) (4.12.2)
+Requirement already satisfied: farama-notifications>=0.0.1 in c:\users\mstan\anaconda3\envs\myenv\lib\site-packages (from gymnasium) (0.0.4)
+Requirement already satisfied: importlib-metadata>=4.8.0 in c:\users\mstan\anaconda3\envs\myenv\lib\site-packages (from gymnasium) (8.5.0)
+Collecting gymnasium
+  Using cached gymnasium-1.0.0-py3-none-any.whl.metadata (9.5 kB)
+Requirement already satisfied: zipp>=3.20 in c:\users\mstan\anaconda3\envs\myenv\lib\site-packages (from importlib-metadata>=4.8.0->gymnasium) (3.20.2)
+Using cached gymnasium-1.0.0-py3-none-any.whl (958 kB)
+Installing collected packages: gymnasium
+  Attempting uninstall: gymnasium
+    Found existing installation: gymnasium 0.29.1
+    Uninstalling gymnasium-0.29.1:
+      Successfully uninstalled gymnasium-0.29.1
+Successfully installed gymnasium-1.0.0
