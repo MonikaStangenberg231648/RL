@@ -3,10 +3,15 @@ import argparse
 from stable_baselines3 import PPO
 from ot2_gym_wrapper import OT2Env  
 from clearml import Task
-
+import wandb
+from wandb.integration.sb3 import WandbCallback
 import os
+
 os.system("pip install 'shimmy>=2.0'")
 
+os.environ['WANDB_API_KEY'] = '81e90cda052e4ff4b2e6d490e7c614a9b48a3307' 
+
+run = wandb.init(project="sb3_pendulum_demo", sync_tensorboard=True)
 
 task = Task.init(project_name='Pendulum-v1/Monika Stangenberg', 
                     task_name='Experiment1')
@@ -27,25 +32,32 @@ args = parser.parse_args()
 
 env = OT2Env(render=False, num_agents=1)
 
-model = PPO('MlpPolicy', env, verbose=1, device='cpu',
-            learning_rate=args.learning_rate, 
-            batch_size=args.batch_size, 
-            n_steps=args.n_steps, 
-            n_epochs=args.n_epochs)
+model = PPO(
+    'MlpPolicy',
+    env,
+    verbose=1,
+    tensorboard_log=f"runs/{run.id}",
+    device='cpu',  
+    learning_rate=args.learning_rate,
+    batch_size=args.batch_size,
+    n_steps=args.n_steps,
+    n_epochs=args.n_epochs
+)
 
-time_steps = args.time_steps  
-iterations = args.iterations 
+wandb_callback = WandbCallback(
+    model_save_freq=10000,
+    model_save_path=f"models/{run.id}",
+    verbose=2
+)
 
-model_dir = "models/ot2_model"
-os.makedirs(model_dir, exist_ok=True)
-
-for i in range(iterations):
-    print(f"Starting iteration {i + 1}/{iterations}")
-    model.learn(total_timesteps=time_steps, progress_bar=True, reset_num_timesteps=False)
-    
-    model.save(f"{model_dir}/ot2_model_{time_steps * (i + 1)}")
-    print(f"Model saved after {time_steps * (i + 1)} timesteps")
+model.learn(
+    total_timesteps=args.time_steps * args.iterations,
+    callback=wandb_callback,
+    progress_bar=True,
+    tb_log_name=f"runs/{run.id}"
+)
 
 env.close()
+wandb.finish()
 print("Training complete")
 
