@@ -1,0 +1,31 @@
+{
+  "os": "Windows-10-10.0.22631-SP0",
+  "python": "CPython 3.8.16",
+  "startedAt": "2025-01-15T12:40:40.001743Z",
+  "program": "rl_train_rem.py",
+  "codePath": "RL\\rl_train_rem.py",
+  "git": {
+    "remote": "https://github.com/MonikaStangenberg231648/RL.git",
+    "commit": "2bc04e60fb8da697fc2ecc96d83a390911a9bbd8"
+  },
+  "email": "231648@buas.nl",
+  "root": "C:\\Users\\mstan\\OneDrive\\Dokumenty\\GitHub\\RL\\RL",
+  "host": "mini-StenG",
+  "executable": "C:\\Users\\mstan\\anaconda3\\envs\\myenv\\python.exe",
+  "codePathLocal": "rl_train_rem.py",
+  "cpu_count": 4,
+  "cpu_count_logical": 8,
+  "disk": {
+    "/": {
+      "total": "510745636864",
+      "used": "384077516800"
+    }
+  },
+  "memory": {
+    "total": "16965230592"
+  },
+  "cpu": {
+    "count": 4,
+    "countLogical": 8
+  }
+}
