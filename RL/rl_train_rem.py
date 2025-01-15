@@ -5,8 +5,7 @@ from ot2_gym_wrapper import OT2Env
 from clearml import Task
 import wandb
 from wandb.integration.sb3 import WandbCallback
-os.system("pip install typing_extensions>=4.10.0")
-os.system("pip install pydantic==2.1.1")
+
 
 
 os.environ['WANDB_API_KEY'] = '81e90cda052e4ff4b2e6d490e7c614a9b48a3307' 
@@ -52,9 +51,9 @@ wandb_callback = WandbCallback(
 
 model.learn(
     total_timesteps=args.time_steps * args.iterations,
-    callback=wandb_callback,
-    progress_bar=True,
-    tb_log_name=f"runs/{run.id}"
+    callback=wandb_callback,            
+    progress_bar=True,                  
+    tb_log_name=f"runs/{run.id}"        
 )
 
 env.close()
