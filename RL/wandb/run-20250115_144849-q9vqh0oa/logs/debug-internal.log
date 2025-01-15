@@ -1,0 +1,58 @@
+2025-01-15 14:48:49,600 INFO    StreamThr :18176 [internal.py:wandb_internal():86] W&B internal server running at pid: 18176, started at: 2025-01-15 14:48:49.598246
+2025-01-15 14:48:49,602 DEBUG   HandlerThread:18176 [handler.py:handle_request():144] handle_request: status
+2025-01-15 14:48:49,603 INFO    WriterThread:18176 [datastore.py:open_for_write():85] open: C:\Users\mstan\OneDrive\Dokumenty\GitHub\RL\RL\wandb\run-20250115_144849-q9vqh0oa\run-q9vqh0oa.wandb
+2025-01-15 14:48:49,607 DEBUG   SenderThread:18176 [sender.py:send():369] send: header
+2025-01-15 14:48:49,658 DEBUG   SenderThread:18176 [sender.py:send():369] send: run
+2025-01-15 14:48:50,131 INFO    SenderThread:18176 [dir_watcher.py:__init__():211] watching files in: C:\Users\mstan\OneDrive\Dokumenty\GitHub\RL\RL\wandb\run-20250115_144849-q9vqh0oa\files
+2025-01-15 14:48:50,132 INFO    SenderThread:18176 [sender.py:_start_run_threads():1100] run started: q9vqh0oa with start time 1736948929.599199
+2025-01-15 14:48:50,136 DEBUG   SenderThread:18176 [sender.py:send_request():396] send_request: summary_record
+2025-01-15 14:48:50,137 INFO    SenderThread:18176 [sender.py:_save_file():1354] saving file wandb-summary.json with policy end
+2025-01-15 14:48:50,142 DEBUG   HandlerThread:18176 [handler.py:handle_request():144] handle_request: check_version
+2025-01-15 14:48:50,142 DEBUG   SenderThread:18176 [sender.py:send_request():396] send_request: check_version
+2025-01-15 14:48:50,334 DEBUG   HandlerThread:18176 [handler.py:handle_request():144] handle_request: run_start
+2025-01-15 14:48:50,351 DEBUG   HandlerThread:18176 [system_info.py:__init__():31] System info init
+2025-01-15 14:48:50,351 DEBUG   HandlerThread:18176 [system_info.py:__init__():46] System info init done
+2025-01-15 14:48:50,351 INFO    HandlerThread:18176 [system_monitor.py:start():181] Starting system monitor
+2025-01-15 14:48:50,351 INFO    SystemMonitor:18176 [system_monitor.py:_start():145] Starting system asset monitoring threads
+2025-01-15 14:48:50,352 INFO    HandlerThread:18176 [system_monitor.py:probe():201] Collecting system info
+2025-01-15 14:48:50,355 INFO    SystemMonitor:18176 [interfaces.py:start():190] Started cpu monitoring
+2025-01-15 14:48:50,364 DEBUG   HandlerThread:18176 [system_info.py:probe():195] Probing system
+2025-01-15 14:48:50,364 INFO    SystemMonitor:18176 [interfaces.py:start():190] Started disk monitoring
+2025-01-15 14:48:50,371 INFO    SystemMonitor:18176 [interfaces.py:start():190] Started memory monitoring
+2025-01-15 14:48:50,386 INFO    SystemMonitor:18176 [interfaces.py:start():190] Started network monitoring
+2025-01-15 14:48:50,387 DEBUG   HandlerThread:18176 [system_info.py:_probe_git():180] Probing git
+2025-01-15 14:48:50,499 DEBUG   HandlerThread:18176 [system_info.py:_probe_git():188] Probing git done
+2025-01-15 14:48:50,499 DEBUG   HandlerThread:18176 [system_info.py:probe():240] Probing system done
+2025-01-15 14:48:50,499 DEBUG   HandlerThread:18176 [system_monitor.py:probe():210] {'os': 'Windows-10-10.0.22631-SP0', 'python': '3.8.16', 'heartbeatAt': '2025-01-15T13:48:50.364821', 'startedAt': '2025-01-15T13:48:49.581265', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'rl_train_rem.py', 'codePath': 'RL\\rl_train_rem.py', 'git': {'remote': 'https://github.com/MonikaStangenberg231648/RL.git', 'commit': 'f5fd59471a9638fd9a0e534202fba8e73bb45ab1'}, 'email': '231648@buas.nl', 'root': 'C:/Users/mstan/OneDrive/Dokumenty/GitHub/RL', 'host': 'mini-StenG', 'username': 'mstan', 'executable': 'C:\\Users\\mstan\\anaconda3\\envs\\myenv\\python.exe', 'cpu_count': 4, 'cpu_count_logical': 8, 'cpu_freq': {'current': 2419.0, 'min': 0.0, 'max': 2419.0}, 'cpu_freq_per_core': [{'current': 2419.0, 'min': 0.0, 'max': 2419.0}], 'disk': {'total': 475.66894149780273, 'used': 357.68465423583984}, 'memory': {'total': 15.800102233886719}}
+2025-01-15 14:48:50,499 INFO    HandlerThread:18176 [system_monitor.py:probe():211] Finished collecting system info
+2025-01-15 14:48:50,499 INFO    HandlerThread:18176 [system_monitor.py:probe():214] Publishing system info
+2025-01-15 14:48:50,499 DEBUG   HandlerThread:18176 [system_info.py:_save_pip():51] Saving list of pip packages installed into the current environment
+2025-01-15 14:48:50,500 DEBUG   HandlerThread:18176 [system_info.py:_save_pip():67] Saving pip packages done
+2025-01-15 14:48:50,501 DEBUG   HandlerThread:18176 [system_info.py:_save_conda():74] Saving list of conda packages installed into the current environment
+2025-01-15 14:48:50,504 ERROR   HandlerThread:18176 [system_info.py:_save_conda():85] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\mstan\anaconda3\envs\myenv\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 81, in _save_conda
+    subprocess.call(
+  File "C:\Users\mstan\anaconda3\envs\myenv\lib\subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\mstan\anaconda3\envs\myenv\lib\subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\mstan\anaconda3\envs\myenv\lib\subprocess.py", line 1311, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2025-01-15 14:48:50,506 DEBUG   HandlerThread:18176 [system_info.py:_save_conda():86] Saving conda packages done
+2025-01-15 14:48:50,507 INFO    HandlerThread:18176 [system_monitor.py:probe():216] Finished publishing system info
+2025-01-15 14:48:50,524 DEBUG   SenderThread:18176 [sender.py:send():369] send: files
+2025-01-15 14:48:50,524 INFO    SenderThread:18176 [sender.py:_save_file():1354] saving file wandb-metadata.json with policy now
+2025-01-15 14:48:50,536 DEBUG   HandlerThread:18176 [handler.py:handle_request():144] handle_request: stop_status
+2025-01-15 14:48:50,537 DEBUG   SenderThread:18176 [sender.py:send_request():396] send_request: stop_status
+2025-01-15 14:48:50,732 DEBUG   SenderThread:18176 [sender.py:send():369] send: telemetry
+2025-01-15 14:48:50,984 INFO    wandb-upload_0:18176 [upload_job.py:push():133] Uploaded file C:\Users\mstan\AppData\Local\Temp\tmpzlt4pbxowandb\r09vg4l2-wandb-metadata.json
+2025-01-15 14:48:51,137 INFO    Thread-16 :18176 [dir_watcher.py:_on_file_created():272] file/dir created: C:\Users\mstan\OneDrive\Dokumenty\GitHub\RL\RL\wandb\run-20250115_144849-q9vqh0oa\files\wandb-summary.json
+2025-01-15 14:48:51,137 INFO    Thread-16 :18176 [dir_watcher.py:_on_file_created():272] file/dir created: C:\Users\mstan\OneDrive\Dokumenty\GitHub\RL\RL\wandb\run-20250115_144849-q9vqh0oa\files\requirements.txt
+2025-01-15 14:48:51,137 INFO    Thread-16 :18176 [dir_watcher.py:_on_file_created():272] file/dir created: C:\Users\mstan\OneDrive\Dokumenty\GitHub\RL\RL\wandb\run-20250115_144849-q9vqh0oa\files\conda-environment.yaml
+2025-01-15 14:48:51,138 INFO    Thread-16 :18176 [dir_watcher.py:_on_file_created():272] file/dir created: C:\Users\mstan\OneDrive\Dokumenty\GitHub\RL\RL\wandb\run-20250115_144849-q9vqh0oa\files\wandb-metadata.json
+2025-01-15 14:48:51,138 INFO    Thread-16 :18176 [dir_watcher.py:_on_file_created():272] file/dir created: C:\Users\mstan\OneDrive\Dokumenty\GitHub\RL\RL\wandb\run-20250115_144849-q9vqh0oa\files\output.log
+2025-01-15 14:48:53,150 INFO    Thread-16 :18176 [dir_watcher.py:_on_file_modified():289] file/dir modified: C:\Users\mstan\OneDrive\Dokumenty\GitHub\RL\RL\wandb\run-20250115_144849-q9vqh0oa\files\output.log
+2025-01-15 14:48:54,156 INFO    Thread-16 :18176 [dir_watcher.py:_on_file_modified():289] file/dir modified: C:\Users\mstan\OneDrive\Dokumenty\GitHub\RL\RL\wandb\run-20250115_144849-q9vqh0oa\files\output.log
+2025-01-15 14:48:54,362 INFO    MainThread:18176 [internal.py:handle_exit():76] Internal process exited
