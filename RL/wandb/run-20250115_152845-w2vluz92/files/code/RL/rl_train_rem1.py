@@ -15,9 +15,9 @@ os.environ['WANDB_API_KEY'] = '81e90cda052e4ff4b2e6d490e7c614a9b48a3307'
 run = wandb.init(
     project="sb3_pendulum_demo",
     sync_tensorboard=True,
-    monitor_gym=False
+    monitor_gym=True,  # automatyczne przesyłanie filmów
+    save_code=True
 )
-
 
 # ClearML Initialization
 task = Task.init(project_name='Pendulum-v1/Monika Stangenberg', task_name='Experiment1')
